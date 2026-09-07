@@ -1,35 +1,30 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# PARA-LIFE
 
-Welcome USER_NAME,
+Mobile-first paramedic game for the **UK & Ireland**.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+Drive cartoon sector maps of real cities, respond to **Category 1 / 2 / 3** calls, make clinical decisions, then **load & go** to hospital — with City Ambulance–style top-down driving.
 
-## Gitpod Reminders
+## Play
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+```bash
+python3 -m http.server 8000
+```
 
-`python3 -m http.server`
+Open `http://localhost:8000` on desktop or phone.
 
-A blue button should appear to click: *Make Public*,
+**Controls**
 
-Another blue button should appear to click: *Open Browser*.
+- Mobile: joystick + GO / BRAKE + siren
+- Desktop: `W/A/S/D` or arrow keys, `Space` for siren
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Features
 
-A blue button should appear to click: *Make Public*,
+- **Maps:** London, Dublin, Manchester, Belfast, Cork, Edinburgh (unlock with levels)
+- **Calls:** Cardiac arrest, trauma, stroke, ACS, seizures, falls, MH crisis, and more
+- **Decisions:** On-scene treatment choices + transport destinations
+- **Progression:** XP each call/shift; ranks from Student Para → Chief of Response
+- **Shop:** Boots, tactical trousers, stethoscope, bags, hi-vis, etc. at **€2.99** (demo IAP unlock)
 
-Another blue button should appear to click: *Open Browser*.
+## Stack
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+HTML5 Canvas · vanilla JS · CSS — no build step.
