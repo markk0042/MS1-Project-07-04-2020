@@ -142,6 +142,7 @@ class DriveEngine {
     this.renderer.domElement.style.width = "100%";
     this.renderer.domElement.style.height = "100%";
     this.renderer.domElement.style.touchAction = "none";
+    this.renderer.domElement.style.zIndex = "1";
     parent.insertBefore(this.renderer.domElement, this.canvas);
 
     // Lights — bright daytime
