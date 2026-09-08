@@ -88,9 +88,10 @@
         <div class="map-card-preview"><canvas></canvas></div>
         <div class="map-card-body">
           <h3>${map.name}</h3>
-          <p>${map.region} · cartoon sector map</p>
+          <p>${map.region} · rescue sector</p>
           <div class="map-meta">
-            <span class="pill ${locked ? "locked" : "open"}">${locked ? `Unlock Lv ${map.unlockLevel}` : "Open"}</span>
+            <span class="pill ${locked ? "locked" : "open"}">${locked ? `Unlock Lv ${map.unlockLevel}` : "READY"}</span>
+            <span class="pill stars">${"★".repeat(Math.min(5, map.unlockLevel + 2))}</span>
             <span class="pill">Cat 1–3</span>
           </div>
         </div>
@@ -247,8 +248,8 @@
     el.style.color = cat === 1 ? "#ff6b6b" : cat === 2 ? "#f0b429" : "#4da3ff";
     $("#hud-objective").textContent =
       shift.phase === "to_call"
-        ? `Respond — ${shift.call.title}`
-        : `Transport to hospital`;
+        ? `Mission: ${shift.call.title}`
+        : `Deliver to Hospital`;
     $("#hud-xp").textContent = String(GameState.data.xpIntoLevel);
     $(".siren-lights").classList.remove("on");
     $("#btn-siren").classList.remove("on");

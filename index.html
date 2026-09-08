@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="theme-color" content="#0a1628" />
+  <meta name="theme-color" content="#1a7ad4" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect fill='%23f5c518' width='64' height='64' rx='12'/%3E%3Cpath fill='%23e23b3b' d='M28 12h8v40h-8z'/%3E%3Cpath fill='%23e23b3b' d='M12 28h40v8H12z'/%3E%3C/svg%3E" />
-  <title>PARA-LIFE — UK & Ireland Paramedic</title>
+  <title>PARA-LIFE — Ambulance Rescue Duty</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700;800;900&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
@@ -19,42 +19,49 @@
       <div class="hero-stage">
         <canvas id="hero-canvas" aria-hidden="true"></canvas>
         <div class="hero-vignette"></div>
+        <div class="hero-badges">
+          <span class="badge-live">● RESCUE DUTY</span>
+          <span class="badge-stars">★★★★★</span>
+        </div>
         <div class="hero-content">
-          <p class="hero-region">UK &amp; Ireland Emergency Response</p>
+          <p class="hero-region">UK &amp; Ireland · Emergency Missions</p>
           <h1 class="brand">PARA-LIFE</h1>
-          <p class="hero-tag">Drive. Assess. Save. Every second counts.</p>
+          <p class="hero-tag">Ambulance rescue duty — race to the call, treat the patient, deliver to hospital.</p>
           <div class="cta-row">
-            <button class="btn btn-primary" data-goto="maps">Start Shift</button>
-            <button class="btn btn-ghost" data-goto="garage">Garage</button>
+            <button class="btn btn-play" data-goto="maps">▶ PLAY MISSION</button>
+          </div>
+          <div class="cta-row cta-secondary">
+            <button class="btn btn-garage" data-goto="garage">GARAGE</button>
+            <button class="btn btn-garage" data-goto="shop">SHOP</button>
           </div>
         </div>
       </div>
       <nav class="bottom-nav">
-        <button data-goto="maps" class="nav-item"><span>Maps</span></button>
-        <button data-goto="garage" class="nav-item"><span>Garage</span></button>
-        <button data-goto="shop" class="nav-item"><span>Shop</span></button>
-        <button data-goto="profile" class="nav-item"><span>Rank</span></button>
+        <button data-goto="maps" class="nav-item"><span class="nav-ico">🗺️</span><span>Missions</span></button>
+        <button data-goto="garage" class="nav-item"><span class="nav-ico">🚑</span><span>Garage</span></button>
+        <button data-goto="shop" class="nav-item"><span class="nav-ico">🛒</span><span>Shop</span></button>
+        <button data-goto="profile" class="nav-item"><span class="nav-ico">⭐</span><span>Rank</span></button>
       </nav>
     </section>
 
-    <!-- MAP SELECT -->
+    <!-- MAP SELECT = MISSIONS -->
     <section id="screen-maps" class="screen">
       <header class="screen-header">
         <button class="back-btn" data-goto="landing" aria-label="Back">←</button>
-        <h2>Choose Sector</h2>
+        <h2>Rescue Missions</h2>
         <div class="hud-chip" id="maps-level-chip">Lv 1</div>
       </header>
-      <p class="screen-sub">Cartoon layouts of real UK &amp; Ireland cities. Pick your patch.</p>
+      <p class="screen-sub">Pick a city sector. Drive, rescue, deliver — like ambulance duty missions.</p>
       <div class="map-grid" id="map-grid"></div>
       <nav class="bottom-nav">
-        <button data-goto="maps" class="nav-item active"><span>Maps</span></button>
-        <button data-goto="garage" class="nav-item"><span>Garage</span></button>
-        <button data-goto="shop" class="nav-item"><span>Shop</span></button>
-        <button data-goto="profile" class="nav-item"><span>Rank</span></button>
+        <button data-goto="maps" class="nav-item active"><span class="nav-ico">🗺️</span><span>Missions</span></button>
+        <button data-goto="garage" class="nav-item"><span class="nav-ico">🚑</span><span>Garage</span></button>
+        <button data-goto="shop" class="nav-item"><span class="nav-ico">🛒</span><span>Shop</span></button>
+        <button data-goto="profile" class="nav-item"><span class="nav-ico">⭐</span><span>Rank</span></button>
       </nav>
     </section>
 
-    <!-- GARAGE / LOADOUT -->
+    <!-- GARAGE -->
     <section id="screen-garage" class="screen">
       <header class="screen-header">
         <button class="back-btn" data-goto="landing" aria-label="Back">←</button>
@@ -64,10 +71,10 @@
       <p class="screen-sub">Equip kit before you roll. Owned gear boosts score &amp; XP.</p>
       <div class="loadout" id="loadout"></div>
       <nav class="bottom-nav">
-        <button data-goto="maps" class="nav-item"><span>Maps</span></button>
-        <button data-goto="garage" class="nav-item active"><span>Garage</span></button>
-        <button data-goto="shop" class="nav-item"><span>Shop</span></button>
-        <button data-goto="profile" class="nav-item"><span>Rank</span></button>
+        <button data-goto="maps" class="nav-item"><span class="nav-ico">🗺️</span><span>Missions</span></button>
+        <button data-goto="garage" class="nav-item active"><span class="nav-ico">🚑</span><span>Garage</span></button>
+        <button data-goto="shop" class="nav-item"><span class="nav-ico">🛒</span><span>Shop</span></button>
+        <button data-goto="profile" class="nav-item"><span class="nav-ico">⭐</span><span>Rank</span></button>
       </nav>
     </section>
 
@@ -81,14 +88,14 @@
       <p class="screen-sub">In-app purchases — €2.99 each. Unlock boots, bags, scopes &amp; more.</p>
       <div class="shop-grid" id="shop-grid"></div>
       <nav class="bottom-nav">
-        <button data-goto="maps" class="nav-item"><span>Maps</span></button>
-        <button data-goto="garage" class="nav-item"><span>Garage</span></button>
-        <button data-goto="shop" class="nav-item active"><span>Shop</span></button>
-        <button data-goto="profile" class="nav-item"><span>Rank</span></button>
+        <button data-goto="maps" class="nav-item"><span class="nav-ico">🗺️</span><span>Missions</span></button>
+        <button data-goto="garage" class="nav-item"><span class="nav-ico">🚑</span><span>Garage</span></button>
+        <button data-goto="shop" class="nav-item active"><span class="nav-ico">🛒</span><span>Shop</span></button>
+        <button data-goto="profile" class="nav-item"><span class="nav-ico">⭐</span><span>Rank</span></button>
       </nav>
     </section>
 
-    <!-- PROFILE / RANK -->
+    <!-- PROFILE -->
     <section id="screen-profile" class="screen">
       <header class="screen-header">
         <button class="back-btn" data-goto="landing" aria-label="Back">←</button>
@@ -96,10 +103,10 @@
       </header>
       <div class="profile-card" id="profile-card"></div>
       <nav class="bottom-nav">
-        <button data-goto="maps" class="nav-item"><span>Maps</span></button>
-        <button data-goto="garage" class="nav-item"><span>Garage</span></button>
-        <button data-goto="shop" class="nav-item"><span>Shop</span></button>
-        <button data-goto="profile" class="nav-item active"><span>Rank</span></button>
+        <button data-goto="maps" class="nav-item"><span class="nav-ico">🗺️</span><span>Missions</span></button>
+        <button data-goto="garage" class="nav-item"><span class="nav-ico">🚑</span><span>Garage</span></button>
+        <button data-goto="shop" class="nav-item"><span class="nav-ico">🛒</span><span>Shop</span></button>
+        <button data-goto="profile" class="nav-item active"><span class="nav-ico">⭐</span><span>Rank</span></button>
       </nav>
     </section>
 
@@ -108,11 +115,13 @@
       <div class="game-hud" id="game-hud">
         <div class="hud-left">
           <button class="hud-pause" id="btn-pause" aria-label="Pause">❚❚</button>
-          <div class="hud-stat"><span id="hud-cat">CAT —</span></div>
+          <div class="hud-stat cat-pill" id="hud-cat">CAT —</div>
         </div>
         <div class="hud-center">
-          <div class="siren-lights" aria-hidden="true"><i></i><i></i></div>
-          <span id="hud-objective">Responding…</span>
+          <div class="mission-banner">
+            <div class="siren-lights" aria-hidden="true"><i></i><i></i></div>
+            <span id="hud-objective">Responding…</span>
+          </div>
         </div>
         <div class="hud-right">
           <div class="hud-stat">⏱ <span id="hud-timer">0:00</span></div>
@@ -120,6 +129,17 @@
         </div>
       </div>
       <canvas id="game-canvas"></canvas>
+      <div class="speedo" id="speedo" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="52" class="speedo-ring" />
+          <circle cx="60" cy="60" r="52" class="speedo-fill" id="speedo-arc" />
+        </svg>
+        <div class="speedo-readout">
+          <span id="speedo-val">0</span>
+          <small>km/h</small>
+        </div>
+      </div>
+      <div class="minimap" id="minimap-wrap"><canvas id="minimap"></canvas></div>
       <div class="drive-controls" id="drive-controls">
         <div class="joystick-zone" id="joystick-zone">
           <div class="joystick-base" id="joystick-base">
@@ -128,7 +148,7 @@
         </div>
         <div class="pedals">
           <button class="pedal brake" id="btn-brake">BRAKE</button>
-          <button class="pedal accel" id="btn-accel">GO</button>
+          <button class="pedal accel" id="btn-accel">GAS</button>
         </div>
         <button class="siren-btn" id="btn-siren" aria-label="Toggle siren">🚨</button>
       </div>
@@ -152,14 +172,14 @@
         <h2>Transport</h2>
         <p class="scene-desc">Choose destination &amp; mode. Then load and go.</p>
         <div class="choices" id="transport-choices"></div>
-        <button class="btn btn-primary btn-block" id="btn-load-go">Load &amp; Go →</button>
+        <button class="btn btn-play btn-block" id="btn-load-go">LOAD &amp; GO →</button>
       </div>
     </section>
 
-    <!-- SHIFT RESULTS -->
+    <!-- RESULTS -->
     <section id="screen-results" class="screen overlay-screen">
       <div class="panel results-panel">
-        <p class="results-eyebrow">Shift Complete</p>
+        <p class="results-eyebrow">Mission Complete</p>
         <h2 id="results-title">Well done, para</h2>
         <div class="results-stats" id="results-stats"></div>
         <div class="level-bar-wrap">
@@ -167,8 +187,8 @@
           <span id="results-level-text">Level 1</span>
         </div>
         <div class="cta-row">
-          <button class="btn btn-primary" data-goto="maps">Next Shift</button>
-          <button class="btn btn-ghost" data-goto="shop">Shop Kit</button>
+          <button class="btn btn-play" data-goto="maps">NEXT MISSION</button>
+          <button class="btn btn-garage" data-goto="shop">SHOP KIT</button>
         </div>
       </div>
     </section>
@@ -178,8 +198,8 @@
       <div class="panel">
         <h2>Paused</h2>
         <div class="cta-col">
-          <button class="btn btn-primary" id="btn-resume">Resume</button>
-          <button class="btn btn-ghost" id="btn-quit-shift">End Shift</button>
+          <button class="btn btn-play" id="btn-resume">RESUME</button>
+          <button class="btn btn-garage" id="btn-quit-shift">END MISSION</button>
         </div>
       </div>
     </section>
@@ -191,8 +211,8 @@
         <p id="iap-desc"></p>
         <p class="iap-price">€2.99</p>
         <div class="cta-row">
-          <button class="btn btn-ghost" id="iap-cancel">Cancel</button>
-          <button class="btn btn-primary" id="iap-confirm">Buy</button>
+          <button class="btn btn-garage" id="iap-cancel">Cancel</button>
+          <button class="btn btn-play" id="iap-confirm">BUY</button>
         </div>
         <p class="iap-note">Demo purchase — unlocks instantly in this build.</p>
       </div>
