@@ -217,7 +217,7 @@
   /* —— Shift flow —— */
   function startShift(map) {
     const call = pickCall();
-    const callTile = randomRoadTile(map, [map.hospital, map.station], 8);
+    const callTile = pickCallNearStation(map);
     shift = {
       map,
       call,

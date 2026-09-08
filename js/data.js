@@ -428,3 +428,23 @@ function randomRoadTile(map, avoid = [], minDist = 6) {
   }
   return roads[Math.floor(Math.random() * roads.length)] || { x: 5, y: 5 };
 }
+
+/** Prefer jobs a short drive from station so shifts stay punchy on mobile. */
+function pickCallNearStation(map) {
+  const station = map.station;
+  const candidates = [];
+  for (let y = 0; y < map.size; y++) {
+    for (let x = 0; x < map.size; x++) {
+      if (map.layout[y][x] !== 1) continue;
+      const d =
+        Math.abs(x - station.x) +
+        Math.abs(y - station.y);
+      const dh =
+        Math.abs(x - map.hospital.x) +
+        Math.abs(y - map.hospital.y);
+      if (d >= 5 && d <= 14 && dh >= 4) candidates.push({ x, y, d });
+    }
+  }
+  if (!candidates.length) return randomRoadTile(map, [map.hospital, map.station], 5);
+  return candidates[Math.floor(Math.random() * candidates.length)];
+}
